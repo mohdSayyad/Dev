@@ -14,9 +14,8 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Use GitHub Secret
-        run:
-          if [ echo "${{ secrets.ATEST }}" == {{ "wlcome" }} ]
+        run: |
+          if [ "${{ secrets.ATEST }}" == "wlcome" ]
           then
-            echo "we got our secret"
+            echo "We got our secret"
           fi
-
