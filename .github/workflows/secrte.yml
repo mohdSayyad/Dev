@@ -1,0 +1,16 @@
+name: to get a secret
+
+on: 
+  push:
+    branches:
+      - main
+jobs:
+  examples:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: checkout code
+        uses: actions/checout@v2
+
+      - name: get github secrets
+        uses: echo ${{ secrets.ATEST  }}
