@@ -1,16 +1,17 @@
-name: to get a secret
+name: Example Workflow
 
-on: 
+on:
   push:
     branches:
       - main
-jobs:
-  examples:
-    runs-on: ubuntu-latest
-    
-    steps:
-      - name: checkout code
-        uses: actions/checout@v2
 
-      - name: get github secrets
-        uses: echo ${{ secrets.ATEST  }}
+jobs:
+  example:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Use GitHub Secret
+        run: echo ${{ secrets.YOUR_SECRET_NAME }}
