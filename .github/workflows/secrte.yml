@@ -15,7 +15,7 @@ jobs:
 
       - name: Use GitHub Secret
         run:
-          if [ echo "${{ secrets.ATEST }}" == "wlcome" ]
+          if [ echo "${{ secrets.ATEST }}" == {{ "wlcome" }} ]
           then
             echo "we got our secret"
           fi
