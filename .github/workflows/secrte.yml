@@ -14,4 +14,4 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Use GitHub Secret
-        run: echo ${{ secrets.ATEST1 }}
+        run: echo "${{ secrets.ATEST1 }}"
